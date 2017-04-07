@@ -114,6 +114,18 @@ main () {
 	local GOGS_PARENT_DIR=$1
 	local UPDATE_ZIP_FILE=$2
 
+	if [ -z $GOGS_PARENT_DIR ]; then
+		echo "ERROR: Gogs Parent path parameter missing!!"
+		printUsage
+		exit 1
+	fi
+
+	if [ -z $UPDATE_ZIP_FILE ]; then
+		echo "ERROR: Gogs Update zip file missing!!"
+		printUsage
+		exit 1
+	fi
+
 	local GOGS_USER="git"
 	
 	printUsage
