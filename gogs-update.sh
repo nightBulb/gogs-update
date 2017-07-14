@@ -104,8 +104,15 @@ postUpdate () {
 
 printUsage () {
 	echo
-	echo "Usage: $0 gogs_parent_directory new_gogs_zip"
+	echo "Usage: sudo sh $0 gogs_parent_directory new_gogs_zip"
 	echo
+	echo "gogs_parent_directory:"
+	echo "Must be absolute path to parent directory of Gogs installation"
+	echo
+	echo "new_gogs_zip:"
+	echo "Must be a file path which is accessible to Gogs user(git)"
+	echo
+
 }
 
 main () {
